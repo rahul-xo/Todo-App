@@ -19,8 +19,8 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex h-screen justify-center py-24 border-2 border-gray-400">
-      <div className="text-white flex flex-col gap-10">
+    <div className="flex h-screen justify-center items py-24 border-2 border-gray-400">
+      <div className="text-white flex flex-col gap-6">
         <h1 className="font-bold text-5xl text-center">Todo List</h1>
         <form action="" onSubmit={handleSubmit}>
           <input
