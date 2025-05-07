@@ -1,13 +1,13 @@
 import React from "react";
 import CheckButton from "./CheckButton";
 import DeleteButton from "./DeleteButton";
-const Task = ({ task_name }) => {
+const Task = ({ task_name , handleDeleteClick , handleCheckClick }) => {
   return (
-    <li className="flex justify-between items-center text-white text-lg font-semibold border-2 border-black">
+    <li className="flex justify-between items-center text-white text-lg font-semibold">
       {task_name}
       <div className="flex gap-8">
-        <CheckButton />
-        <DeleteButton />
+        <CheckButton handleCheckClick={handleCheckClick} />
+        <DeleteButton handleDeleteClick={handleDeleteClick}/>
       </div>
     </li>
   );
