@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Task from "./Task";
 const ListOfTask = ({ task ,settask }) => {
+  if(task.length==0) return null
+
+  const [isCheck,setisCheck]=useState(false);
   const handleCheckClick = (task_name) => {
-  console.log(task_name);
-    
-  };
+        setisCheck(!isCheck);
+ };
 
   const handleDeleteClick = (task_name) => {
     const updatedList=task.filter((val)=> val !== task_name);
@@ -19,6 +21,7 @@ const ListOfTask = ({ task ,settask }) => {
           key={idx}
           handleCheckClick={()=>handleCheckClick(task_name)}
           handleDeleteClick={()=>{handleDeleteClick(task_name)}}
+          isCheck={isCheck}
         />
       ))}
     </ul>
