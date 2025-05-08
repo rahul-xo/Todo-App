@@ -17,7 +17,7 @@ const HomePage = () => {
       setvalue("");
       return;
     } else {
-      settask(prev => [...prev, inputvalue]);
+      settask(prev => [...prev,{id:inputvalue,content:inputvalue,Check:false}]);
       setvalue("");
     }
     
