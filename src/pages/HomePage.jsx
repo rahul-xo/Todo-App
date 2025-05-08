@@ -12,7 +12,7 @@ const HomePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputvalue == "" || task.includes(inputvalue)) {
+    if (inputvalue == "" || task.some((currtask)=>currtask.content===inputvalue)) {
       alert("Invalid or already exist !");
       setvalue("");
       return;
